@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>박정원 포트폴리오</title>
+    <link rel="stylesheet" href="css/fullpage.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="lib/jquery-3.7.1.min.js"></script>
+    <script src="lib/fullpage.min.js"></script>
+    <script>
+        $(function () {
+            var myFullpage = new fullpage('#fullpage', {
+                anchors: ['Home', 'About', 'Project', 'Design', 'Contact'],
+                sectionsColor: ['#fcffb0', '#d6ffdf', '#ffd6f1', '#d6e0ff', '#e6d6ff'],
+                scrollOverflow: false,
+            });
+        })//script end
+    </script>
+</head>
+
+<body>
+    <header class="header">
+        <div class="inner">
+            <h1><a href="#">logo</a></h1>
+
+            <nav class="pc pc_nav">
+                <ul class="gnb">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Project</a></li>
+                    <li><a href="#">Design</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul><!-- .gnb end -->
+            </nav><!-- .pc_nav end -->
+
+            <nav class="mobile mobile_nav">
+                <button>
+                    <img src="img/menu.svg" alt="메뉴보기">
+                </button>
+
+                <ul class="gnb">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Project</a></li>
+                    <li><a href="#">Design</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul><!-- .gnb end -->
+            </nav><!-- .mobile_nav end -->
+        </div><!-- .inner end -->
+    </header><!-- .header end -->
+
+    <div id="fullpage">
+        <div class="section" id="section0">
+            <div class="inner">
+                <div class="text">
+                    <span class="name">Web Publisher <strong>PARK JEONG WON</strong></span>
+                    <h2>PORTFOLIO</h2>
+                    <span class="sub_title">Welcome to PUBLISHING <strong>GARDEN</strong></span>
+                </div><!-- .text end -->
+
+                <div class="mouse_scroll">
+                    <div class="mouse">
+                        <div class="scroll">
+                            <span>스크롤을 통해 내용을 확인할 수 있습니다.</span>
+                        </div><!-- .scroll end -->
+                    </div><!-- .mouse end -->
+                </div><!-- .mouse_scroll end -->
+            </div><!-- .inner end -->
+        </div><!-- #section0 end -->
+
+        <div class="section" id="section1">
+            <div class="inner">
+                <div class="left">
+                    <figure><img src="" alt=""></figure>
+                    <div class="about">
+                        <h3>About</h3>
+                        <div class="text">
+                            <ul>
+                                <li>
+                                    <span class="list">Name</span>
+                                    <span class="list_cont">박정원</span>
+                                </li>
+                                <li>
+                                    <span class="list">Birth</span>
+                                    <span class="list_cont">2001.03.14</span>
+                                </li>
+                                <li>
+                                    <span class="list">Phone</span>
+                                    <span class="list_cont">010-4481-1278</span>
+                                </li>
+                                <li>
+                                    <span class="list">Email</span>
+                                    <span class="list_cont">wjd1278@naver.com</span>
+                                </li>
+                            </ul>
+                        </div><!-- .text end -->
+                    </div><!-- about end -->
+                </div><!-- .left end -->
+
+                <div class="right">
+                    <div class="certificate">
+                        <h3>Certificate</h3>
+                        <ul>
+                            <li>
+                                <span class="date">2024.06</span>
+                                <span class="date_cont">정보처리기사(필기)</span>
+                            </li>
+                            <li>
+                                <span class="date">2021.08</span>
+                                <span class="date_cont">상공회의소 한자 3급</span>
+                            </li>
+                            <li>
+                                <span class="date">2021.08</span>
+                                <span class="date_cont">2종 보통 운전 면허</span>
+                            </li>
+                        </ul>
+                    </div><!-- certificate end -->
+
+                    <div class="education">
+                        <h3>Education</h3>
+                        <ul>
+                            <li>
+                                <span class="date">2024.08</span>
+                                <span class="date_cont">중앙대학교 영어영문학과 졸업</span>
+                            </li>
+                            <li>
+                                <span class="date">2024.04 ~ 2024.08</span>
+                                <span class="date_cont">그린컴퓨터학원<br>(디지털디자인) 반응형 UI/UX 웹디자인 & 웹퍼블리셔 웹콘텐츠 개발자 양성과정
+                                    24-3</span>
+                            </li>
+                            <li>
+                                <span class="date">2022.10 ~ 2022.11</span>
+                                <span class="date_cont">네이버 부스트코스<br>&lt데이터 사이언스 2022&gt 코칭스터디 : 2022</span>
+                            </li>
+                            <li>
+                                <span class="date">2022.07 ~ 2022.08</span>
+                                <span class="date_cont">네이버 부스트코스<br>모두를 위한 파이썬 &ltPY4E 2022&gt 코칭스터디 : 2022</span>
+                            </li>
+                        </ul>
+                    </div><!-- .education end -->
+
+                    <div class="skills">
+                        <h3>Skills</h3>
+                        <ul class="icon">
+                            <li class=""><img src="img/gs01.svg" alt=""></li>
+                            <li class=""><img src="img/gs01.svg" alt=""></li>
+                            <li class=""><img src="" alt=""></li>
+                            <li class=""><img src="" alt=""></li>
+                            <li class=""><img src="" alt=""></li>
+                            <li class=""><img src="" alt=""></li>
+                            <li class=""><img src="" alt=""></li>
+                            <li class=""><img src="" alt=""></li>
+                            <li class=""><img src="" alt=""></li>
+                        </ul><!-- .icon end -->
+                        <ul class="explain">
+                            <li class="on">aaaaaaaaaa</li>
+                            <li class=""></li>
+                            <li class=""></li>
+                            <li class=""></li>
+                            <li class=""></li>
+                            <li class=""></li>
+                            <li class=""></li>
+                            <li class=""></li>
+                            <li class=""></li>
+                            <li class=""></li>
+                        </ul><!-- explain end -->
+                    </div><!-- .skills end -->
+                </div><!-- right end -->
+            </div><!-- .inner end -->
+        </div><!-- #section1 end -->
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,12 @@
+@font-face {
+    font-family: 'Cormorant';
+    src: url('font/cormorant/Cormorant-Bold.eot');
+    src: url('font/cormorant/Cormorant-Bold.eot?#iefix') format('embedded-opentype'),
+        url('font/cormorant/Cormorant-Bold.woff2') format('woff2'),
+        url('font/cormorant/Cormorant-Bold.woff') format('woff'),
+        url('font/cormorant/Cormorant-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+

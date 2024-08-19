@@ -1,0 +1,12 @@
+@font-face {
+    font-family: 'DM Serif Text';
+    src: url('font/DM/DMSerifText-Regular.eot');
+    src: url('font/DM/DMSerifText-Regular.eot?#iefix') format('embedded-opentype'),
+        url('font/DM/DMSerifText-Regular.woff2') format('woff2'),
+        url('font/DM/DMSerifText-Regular.woff') format('woff'),
+        url('font/DM/DMSerifText-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
