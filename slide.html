@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .scroll-container {
+            height: 100vh;
+        }
+
+        .primary, .secondary {
+            top: 26%;
+            left: 100%;
+            width: 100%;
+            overflow: hidden;
+            position: absolute;
+            white-space: nowrap;
+        }
+
+        .primary div {
+            width: 100%;
+            margin-left: 20px;
+            border-radius: 14px;
+            background-color: aquamarine;
+        }
+
+        .primary {
+            display: flex;
+            justify-content: space-around;
+            animation: scroll-horizontal 20s linear infinite;
+        }
+
+        .secondary {
+            animation: scroll-horizontal 20s linear infinite;
+            animation-delay: 10s;
+        }
+
+        @keyframes scroll-horizontal {
+            0% {
+                left: 100%;
+            }
+
+            100% {
+                left: -100%;
+            }
+        }
+    </style>
+    <script src="lib/jquery-3.7.1.min.js"></script>
+    
+    <script>
+        $(function(){
+            
+        })
+    </script>
+</head>
+<body>
+    <div class="scroll-container">
+        <div class="primary">
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+            <div>4</div>
+            <div>5</div>
+        </div>
+        <div class="primary secondary">
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+            <div>4</div>
+            <div>5</div>
+        </div>
+    </div>
+</body>
+</html>
