@@ -1239,7 +1239,7 @@ button.website {
     }
 
     #section0 .text .title h2 {
-        font-size: 100px;
+        font-size: 90px;
     }
 
     #section0 .mouse_scroll {
@@ -1312,7 +1312,11 @@ button.website {
         position: relative;
         right: auto;
         bottom: auto;
-    }     
+    }  
+    
+    #section0 .text .title h2 {
+        font-size: 60px;
+    }
 
     #section2 .list .item {
         display: block;
