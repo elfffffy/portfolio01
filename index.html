@@ -30,8 +30,9 @@
                 slidesToShow: 3,
                 infinite: true,
                 arrows: false,
+                dots: true,
                 // autoplay: true,
-                autoplaySpeed : 3500,
+                autoplaySpeed: 3500,
                 responsive: [
                     {
                         breakpoint: 768,
@@ -59,6 +60,7 @@
             })
 
             let gnb = $('.pc_nav .gnb li');
+            gnb.eq(0).addClass('active');
             gnb.click(function () {
                 gnb.removeClass('active');
                 $(this).addClass('active');
@@ -67,19 +69,19 @@
             let skill = $('.skills li');
             let skillText = $('.skills .explain li');
 
-            skill.mouseenter(function(){
+            skill.mouseenter(function () {
                 skillText.hide();
                 skillText.eq($(this).index()).fadeIn();
             })
 
-            skill.mouseleave(function(){
+            skill.mouseleave(function () {
                 skillText.fadeOut();
             })
 
             let tabMenu = $('#section2 .tab_menu .menu li');
             let project = $('#section2 .list');
 
-            tabMenu.click(function(){
+            tabMenu.click(function () {
                 tabMenu.removeClass('on');
                 $(this).addClass('on');
 
@@ -92,7 +94,7 @@
 
             qrBtn.click(function () {
                 $(this).toggleClass('on');
-                $(this).next().slideToggle();
+                $(this).next().toggleClass('on');
             })
         })//script end
     </script>
@@ -133,11 +135,13 @@
         <div class="section" id="section0">
             <div class="inner">
                 <div class="text">
-                    <h2>
-                        PORTFOLIO
+                    <div class="box">
+                        <div class="title">
+                            <h2 style="display: inline-block">PORTFOLIO</h2>
+                        </div><!-- .title end -->
                         <span class="name">Web Publisher <strong>PARK JEONG WON</strong></span>
                         <span class="sub_title">Welcome to PUBLISHING <strong>GARDEN</strong></span>
-                    </h2>
+                    </div>
 
                 </div><!-- .text end -->
 
@@ -236,18 +240,6 @@
                             <li class=""><img src="img/github-icon.svg" alt="github"></li>
                             <li class=""><img src="img/git-icon.svg" alt="git"></li>
                         </ul><!-- .icon end -->
-                        <ul class="explain">
-                            <li class="">html 설명입니다</li>
-                            <li class="">css 설명입니다</li>
-                            <li class=""></li>
-                            <li class=""></li>
-                            <li class=""></li>
-                            <li class=""></li>
-                            <li class=""></li>
-                            <li class=""></li>
-                            <li class=""></li>
-                            <li class=""></li>
-                        </ul><!-- explain end -->
                     </div><!-- .skills end -->
                 </div><!-- right end -->
             </div><!-- .inner end -->
@@ -268,7 +260,7 @@
                 </nav><!-- .tab_menu end -->
 
                 <div class="list all on">
-                    <div class="item">
+                    <div class="item"><!-- .amuse -->
                         <figure><img src="img/amuse.png" alt="어뮤즈"></figure>
 
                         <div class="text">
@@ -307,7 +299,7 @@
                         </div><!-- .text end -->
                     </div><!-- .item end -->
 
-                    <div class="item">
+                    <div class="item"><!-- .purito -->
                         <figure><img src="img/mockup.png" alt=""></figure>
 
                         <div class="text">
@@ -343,8 +335,8 @@
                         </div><!-- .text end -->
                     </div><!-- .item end -->
 
-                    <div class="item">
-                        <figure><img src="img/mockup.png" alt=""></figure>
+                    <div class="item"><!-- soomgo -->
+                        <figure><img src="img/soomgo.png" alt="숨고"></figure>
 
                         <div class="text">
                             <h3>숨고</h3>
@@ -382,8 +374,8 @@
                         </div><!-- .text end -->
                     </div><!-- .item end -->
 
-                    <div class="item">
-                        <figure><img src="img/mockup.png" alt=""></figure>
+                    <div class="item"><!-- salon -->
+                        <figure><img src="img/salon.png" alt="슬유살롱"></figure>
 
                         <div class="text">
                             <h3>슬유살롱</h3>
@@ -489,8 +481,8 @@
                         </div><!-- .text end -->
                     </div><!-- .item end -->
 
-                    <div class="item">
-                        <figure><img src="img/mockup.png" alt=""></figure>
+                    <div class="item"><!-- paris -->
+                        <figure><img src="img/paris.png" alt="파리바게트"></figure>
 
                         <div class="text">
                             <h3>파리바게트</h3>
@@ -520,8 +512,8 @@
                         </div><!-- .text end -->
                     </div><!-- .item end -->
 
-                    <div class="item">
-                        <figure><img src="img/mockup.png" alt=""></figure>
+                    <div class="item"><!-- cgv -->
+                        <figure><img src="img/cgv.png" alt="CGV"></figure>
 
                         <div class="text">
                             <h3>CGV</h3>
@@ -558,8 +550,8 @@
                 </div><!-- .list end -->
 
                 <div class="list web">
-                    <div class="item">
-                        <figure><img src="img/mockup.png" alt=""></figure>
+                    <div class="item"><!-- .amuse -->
+                        <figure><img src="img/amuse.png" alt="어뮤즈"></figure>
 
                         <div class="text">
                             <h3>어뮤즈</h3>
@@ -587,17 +579,17 @@
                             <div class="buttons">
                                 <button class="process">PROCESS</button>
                                 <button class="website">WEBSITE</button>
-                            </div>
+                            </div><!-- .buttons end -->
 
                             <button class="qr">QR 보기</button>
                             <div class="qr_img">
-                                <img src="" alt="">
+                                <img src="img/gs01.svg" alt="">
                             </div><!-- .qr_img end -->
 
                         </div><!-- .text end -->
                     </div><!-- .item end -->
 
-                    <div class="item">
+                    <div class="item"><!-- .purito -->
                         <figure><img src="img/mockup.png" alt=""></figure>
 
                         <div class="text">
@@ -633,8 +625,8 @@
                         </div><!-- .text end -->
                     </div><!-- .item end -->
 
-                    <div class="item">
-                        <figure><img src="img/mockup.png" alt=""></figure>
+                    <div class="item"><!-- soomgo -->
+                        <figure><img src="img/soomgo.png" alt="숨고"></figure>
 
                         <div class="text">
                             <h3>숨고</h3>
@@ -662,7 +654,7 @@
                             <div class="buttons">
                                 <button class="process">PROCESS</button>
                                 <button class="website">WEBSITE</button>
-                            </div>
+                            </div><!-- buttons end -->
 
                             <button class="qr">QR 보기</button>
                             <div class="qr_img">
@@ -672,8 +664,8 @@
                         </div><!-- .text end -->
                     </div><!-- .item end -->
 
-                    <div class="item">
-                        <figure><img src="img/mockup.png" alt=""></figure>
+                    <div class="item"><!-- salon -->
+                        <figure><img src="img/salon.png" alt="슬유살롱"></figure>
 
                         <div class="text">
                             <h3>슬유살롱</h3>
@@ -779,8 +771,8 @@
                         </div><!-- .text end -->
                     </div><!-- .item end -->
 
-                    <div class="item">
-                        <figure><img src="img/mockup.png" alt=""></figure>
+                    <div class="item"><!-- paris -->
+                        <figure><img src="img/paris.png" alt="파리바게트"></figure>
 
                         <div class="text">
                             <h3>파리바게트</h3>
@@ -812,8 +804,8 @@
                 </div><!-- .list end -->
 
                 <div class="list app">
-                    <div class="item">
-                        <figure><img src="img/mockup.png" alt=""></figure>
+                    <div class="item"><!-- cgv -->
+                        <figure><img src="img/cgv.png" alt="CGV"></figure>
 
                         <div class="text">
                             <h3>CGV</h3>
@@ -854,17 +846,61 @@
             <h3>Graphic Design</h3>
 
             <div class="graphic_slide">
-                <div class="item">1</div>
-                <div class="item">2</div>
-                <div class="item">3</div>
-                <div class="item">4</div>
-                <div class="item">5</div>
-                <div class="item">5</div>
-                <div class="item">5</div>
-                <div class="item">5</div>
-                <div class="item">5</div>
-                <div class="item">5</div>
-                <div class="item">5</div>
+                <div class="item ps">
+                    <a href="design/ps01.jpg" data-fancybox>
+                        <figure><img src="design/ps01.jpg" alt="포토샵"></figure>
+                    </a>
+                </div>
+                <div class="item ps">
+                    <a href="design/ps02.jpg" data-fancybox>
+                        <figure><img src="design/ps02.jpg" alt="포토샵"></figure>
+                    </a>
+                </div>
+                <div class="item ps">
+                    <a href="design/ps03.jpg" data-fancybox>
+                        <figure><img src="design/ps03.jpg" alt="포토샵"></figure>
+                    </a>
+                </div>
+                <div class="item ps">
+                    <a href="design/ps04.jpg" data-fancybox>
+                        <figure><img src="design/ps04.jpg" alt="포토샵"></figure>
+                    </a>
+                </div>
+                <div class="item ps">
+                    <a href="design/ps05.jpg" data-fancybox>
+                        <figure><img src="design/ps05.jpg" alt="포토샵"></figure>
+                    </a>
+                </div>
+                <div class="item ps">
+                    <a href="design/ps06.jpg" data-fancybox>
+                        <figure><img src="design/ps06.jpg" alt="포토샵"></figure>
+                    </a>
+                </div>
+                <div class="item ps">
+                    <a href="design/ps07.jpg" data-fancybox>
+                        <figure><img src="design/ps07.jpg" alt="포토샵"></figure>
+                    </a>
+                </div>
+                <div class="item ps">
+                    <a href="design/ps08.jpg" data-fancybox>
+                        <figure><img src="design/ps08.jpg" alt="포토샵"></figure>
+                    </a>
+                </div>
+                <div class="item ps">
+                    <a href="design/ps09.jpg" data-fancybox>
+                        <figure><img src="design/ps09.jpg" alt="포토샵"></figure>
+                    </a>
+                </div>
+                <div class="item ai">
+                    <a href="design/ai01.jpg" data-fancybox>
+                        <figure><img src="design/ai01.jpg" alt="일러스트"></figure>
+                    </a>
+                </div>
+                <div class="item ai">
+                    <a href="design/ai02.jpg" data-fancybox>
+                        <figure><img src="design/ai02.jpg" alt="일러스트"></figure>
+                    </a>
+                </div>
             </div><!-- .slide end -->
         </div><!-- #section3 end -->
 

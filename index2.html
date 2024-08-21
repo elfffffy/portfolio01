@@ -1,0 +1,1018 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/slick.css" />
+    <link rel="stylesheet" href="css/slick-theme.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css" />
+    <link rel="stylesheet" href="css/style2.css" />
+
+    <script src="lib/jquery-3.7.1.min.js"></script>
+    <script src="lib/slick.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
+
+    <script>
+        $(function () {
+            $('.graphic_slide').slick({
+                centerMode: true,
+                centerPadding: '200px',
+                slidesToShow: 3,
+                infinite: true,
+                arrows: false,
+                dots: true,
+                // autoplay: true,
+                autoplaySpeed: 3500,
+                responsive: [
+                    {
+                        breakpoint: 1024,
+                        settings: {
+                            arrows: false,
+                            centerMode: true,
+                            centerPadding: '100px',
+                            slidesToShow: 2
+                        }
+                    },
+                    {
+                        breakpoint: 480,
+                        settings: {
+                            arrows: false,
+                            centerMode: true,
+                            centerPadding: '40px',
+                            slidesToShow: 1
+                        }
+                    }
+                ]
+            });
+
+            Fancybox.bind("[data-fancybox]", {
+
+            })
+
+            let gnb = $('.pc_nav .gnb li');
+            gnb.eq(0).addClass('active');
+            gnb.click(function () {
+                gnb.removeClass('active');
+                $(this).addClass('active');
+            })
+
+            let menuBtn = $('.mobile_nav button');
+            let mobileGnb = $('.mobile_nav .gnb');
+
+            menuBtn.click(function(){
+                menuBtn.toggleClass('on');
+                mobileGnb.slideToggle();
+            })
+
+            let skill = $('.skills li');
+            let skillText = $('.skills .explain li');
+
+            skill.mouseenter(function () {
+                skillText.hide();
+                skillText.eq($(this).index()).fadeIn();
+            })
+
+            skill.mouseleave(function () {
+                skillText.fadeOut();
+            })
+
+            let tabMenu = $('#section2 .tab_menu .menu li');
+            let project = $('#section2 .list');
+
+            tabMenu.click(function () {
+                tabMenu.removeClass('on');
+                $(this).addClass('on');
+
+                project.removeClass('on');
+                project.eq($(this).index()).addClass('on');
+            })
+
+            let qrBtn = $('.qr');
+            let qrImg = $('.qr_img');
+
+            qrBtn.click(function () {
+                $(this).toggleClass('on');
+                $(this).next().slideToggle();
+            })
+        })//script end
+    </script>
+</head>
+
+<body>
+
+    <body>
+        <header class="header">
+            <div class="inner">
+                <h1><a href="#">🎄</a></h1>
+
+                <nav class="pc pc_nav">
+                    <ul class="gnb">
+                        <li><a href="#1">Home</a></li>
+                        <li><a href="#2">About</a></li>
+                        <li><a href="#3">Project</a></li>
+                        <li><a href="#4">Design</a></li>
+                        <li><a href="#5">Contact</a></li>
+                    </ul><!-- .gnb end -->
+                </nav><!-- .pc_nav end -->
+
+                <nav class="mobile mobile_nav">
+                    <button>
+                        menu
+                    </button>
+
+                    <ul class="gnb">
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Project</a></li>
+                        <li><a href="#">Design</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul><!-- .gnb end -->
+                </nav><!-- .mobile_nav end -->
+            </div><!-- .inner end -->
+        </header><!-- .header end -->
+
+        <main>
+            <div class="section" id="section0">
+                <div class="inner">
+                    <div class="text">
+                        <div class="box">
+                            <div class="title">
+                                <h2 style="display: inline-block">PORTFOLIO</h2>
+                            </div><!-- .title end -->
+                            <span class="name">Web Publisher <br><strong>PARK JEONG WON</strong></span>
+                            <span class="sub_title">Welcome to PUBLISHING <br><strong>GARDEN</strong></span>
+                        </div>
+
+                    </div><!-- .text end -->
+
+                    <div class="mouse_scroll">
+                        <div class="mouse">
+                            <div class="scroll">
+                                <span>스크롤을 통해 내용을 확인할 수 있습니다.</span>
+                            </div><!-- .scroll end -->
+                        </div><!-- .mouse end -->
+                        <p>스크롤을 통해 내용을 확인할 수 있습니다.</p>
+                    </div><!-- .mouse_scroll end -->
+                </div><!-- .inner end -->
+            </div><!-- #section0 end -->
+
+            <div class="section" id="section1">
+                <div class="inner">
+                    <div class="left">
+                        <figure><img src="" alt=""></figure>
+                        <div class="about">
+                            <h3>About</h3>
+                            <div class="text">
+                                <ul>
+                                    <li>
+                                        <span class="list">Name</span>
+                                        <span class="list_cont">박정원</span>
+                                    </li>
+                                    <li>
+                                        <span class="list">Birth</span>
+                                        <span class="list_cont">2001.03.14</span>
+                                    </li>
+                                    <li>
+                                        <span class="list">Phone</span>
+                                        <span class="list_cont">010-4481-1278</span>
+                                    </li>
+                                    <li>
+                                        <span class="list">Email</span>
+                                        <span class="list_cont">wjd1278@naver.com</span>
+                                    </li>
+                                </ul>
+                            </div><!-- .text end -->
+                        </div><!-- about end -->
+                    </div><!-- .left end -->
+
+                    <div class="right">
+                        <div class="certificate">
+                            <h3>Certificate</h3>
+                            <ul>
+                                <li>
+                                    <span class="date">2024.06</span>
+                                    <span class="date_cont">정보처리기사(필기)</span>
+                                </li>
+                                <li>
+                                    <span class="date">2021.08</span>
+                                    <span class="date_cont">상공회의소 한자 3급</span>
+                                </li>
+                                <li>
+                                    <span class="date">2021.08</span>
+                                    <span class="date_cont">2종 보통 운전 면허</span>
+                                </li>
+                            </ul>
+                        </div><!-- certificate end -->
+
+                        <div class="education">
+                            <h3>Education</h3>
+                            <ul>
+                                <li>
+                                    <span class="date">2024.08</span>
+                                    <span class="date_cont">중앙대학교 영어영문학과 졸업</span>
+                                </li>
+                                <li>
+                                    <span class="date">2024.04 ~ 2024.08</span>
+                                    <span class="date_cont">그린컴퓨터학원<br>(디지털디자인) 반응형 UI/UX 웹디자인 & 웹퍼블리셔 웹콘텐츠 개발자 양성과정
+                                        24-3</span>
+                                </li>
+                                <li>
+                                    <span class="date">2022.10 ~ 2022.11</span>
+                                    <span class="date_cont">네이버 부스트코스<br>&lt데이터 사이언스 2022&gt 코칭스터디 : 2022</span>
+                                </li>
+                                <li>
+                                    <span class="date">2022.07 ~ 2022.08</span>
+                                    <span class="date_cont">네이버 부스트코스<br>모두를 위한 파이썬 &ltPY4E 2022&gt 코칭스터디 : 2022</span>
+                                </li>
+                            </ul>
+                        </div><!-- .education end -->
+
+                        <div class="skills">
+                            <h3>Skills</h3>
+                            <ul class="icon">
+                                <li class=""><img src="img/html-icon.svg" alt="html"></li>
+                                <li class=""><img src="img/css-icon.svg" alt="css"></li>
+                                <li class=""><img src="img/js-icon.svg" alt="javascript"></li>
+                                <li class=""><img src="img/jquery-icon.png" alt="jquery"></li>
+                                <li class=""><img src="img/ps-icon.svg" alt="photoshop"></li>
+                                <li class=""><img src="img/ai-icon.svg" alt="illustration"></li>
+                                <li class=""><img src="img/react-icon.png" alt="react"></li>
+                                <li class=""><img src="img/github-icon.svg" alt="github"></li>
+                                <li class=""><img src="img/git-icon.svg" alt="git"></li>
+                            </ul><!-- .icon end -->
+                        </div><!-- .skills end -->
+                    </div><!-- right end -->
+                </div><!-- .inner end -->
+            </div><!-- #section1 end -->
+
+            <div class="section" id="section2">
+                <div class="inner">
+                    <nav class="tab_menu">
+                        <div class="line">
+                            <span>✱</span>
+                        </div><!-- line end -->
+
+                        <ul class="menu">
+                            <li class="on">ALL</li>
+                            <li>WEB</li>
+                            <li>APP</li>
+                        </ul><!-- .menu end -->
+                    </nav><!-- .tab_menu end -->
+
+                    <div class="list all on">
+                        <div class="item"><!-- .amuse -->
+                            <figure><img src="img/amuse.png" alt="어뮤즈"></figure>
+
+                            <div class="text">
+                                <h3>어뮤즈</h3>
+                                <p>뷰티 브랜드 '어뮤즈' 반응형 홈페이지 리뉴얼입니다.</p>
+
+                                <ul>
+                                    <li>
+                                        <span class="option">프로젝트</span>
+                                        <span class="option_cont">반응형 웹사이트/리뉴얼</span>
+                                    </li>
+                                    <li>
+                                        <span class="option">프로그램</span>
+                                        <span class="option_cont">VSCode, Ps, Figma</span>
+                                    </li>
+                                    <li>
+                                        <span class="option">사용언어</span>
+                                        <span class="option_cont">HTML, CSS, JS, Jquery</span>
+                                    </li>
+                                    <li>
+                                        <span class="option">참여도</span>
+                                        <span class="option_cont">기획, 디자인, 퍼블리싱 100%</span>
+                                    </li>
+                                </ul>
+
+                                <div class="buttons">
+                                    <button class="process">PROCESS</button>
+                                    <button class="website">WEBSITE</button>
+                                </div><!-- .buttons end -->
+
+                                <div class="qr_box">
+                                    <button class="qr">QR 보기</button>
+                                    <div class="qr_img">
+                                        <img src="img/gs01.svg" alt="">
+                                    </div><!-- .qr_img end -->
+                                </div><!-- qr-box end -->
+
+                            </div><!-- .text end -->
+                        </div><!-- .item end -->
+
+                        <div class="item"><!-- .purito -->
+                            <figure><img src="img/mockup.png" alt=""></figure>
+
+                            <div class="text">
+                                <h3>퓨리토 서울</h3>
+                                <p>건강/뷰티 브랜드 '퓨리토 서울' 반응형 홈페이지 모작입니다.</p>
+
+                                <ul>
+                                    <li>
+                                        <span class="option">프로젝트</span>
+                                        <span class="option_cont">반응형 웹사이트/모작</span>
+                                    </li>
+                                    <li>
+                                        <span class="option">프로그램</span>
+                                        <span class="option_cont">VSCode</span>
+                                    </li>
+                                    <li>
+                                        <span class="option">사용언어</span>
+                                        <span class="option_cont">HTML, CSS, JS, Jquery</span>
+                                    </li>
+                                    <li>
+                                        <span class="option">참여도</span>
+                                        <span class="option_cont">퍼블리싱 100%</span>
+                                    </li>
+                                </ul>
+
+                                <div class="buttons">
+                                    <button class="website">WEBSITE</button>
+                                </div>
+
+                                <button class="qr">QR 보기</button>
+                                <div class="qr_img">
+                                    <img src="" alt="">
+                                </div><!-- .qr_img end -->
+
+                            </div><!-- .text end -->
+                        </div><!-- .item end -->
+
+                        <div class="item"><!-- soomgo -->
+                            <figure><img src="img/soomgo.png" alt="숨고"></figure>
+
+                            <div class="text">
+                                <h3>숨고</h3>
+                                <p>전문가 매칭 서비스 플랫폼 '숨고' 반응형 홈페이지 리뉴얼입니다.</p>
+
+                                <ul>
+                                    <li>
+                                        <span class="option">프로젝트</span>
+                                        <span class="option_cont">반응형 웹사이트/리뉴얼</span>
+                                    </li>
+                                    <li>
+                                        <span class="option">프로그램</span>
+                                        <span class="option_cont">VSCode, Figma</span>
+                                    </li>
+                                    <li>
+                                        <span class="option">사용언어</span>
+                                        <span class="option_cont">HTML, CSS, JS</span>
+                                    </li>
+                                    <li>
+                                        <span class="option">참여도</span>
+                                        <span class="option_cont">기획, 디자인, 퍼블리싱 100%</span>
+                                    </li>
+                                </ul>
+
+                                <div class="buttons">
+                                    <button class="process">PROCESS</button>
+                                    <button class="website">WEBSITE</button>
+                                </div><!-- buttons end -->
+
+                                <button class="qr">QR 보기</button>
+                                <div class="qr_img">
+                                    <img src="" alt="">
+                                </div><!-- .qr_img end -->
+
+                            </div><!-- .text end -->
+                        </div><!-- .item end -->
+
+                        <div class="item"><!-- salon -->
+                            <figure><img src="img/salon.png" alt="슬유살롱"></figure>
+
+                            <div class="text">
+                                <h3>슬유살롱</h3>
+                                <p>1인 가구를 대상으로 유성구에서 운영하는 '슬유살롱' 반응형 홈페이지 모작입니다.</p>
+
+                                <ul>
+                                    <li>
+                                        <span class="option">프로젝트</span>
+                                        <span class="option_cont">반응형 웹사이트/모작</span>
+                                    </li>
+                                    <li>
+                                        <span class="option">프로그램</span>
+                                        <span class="option_cont">VSCode, Figma</span>
+                                    </li>
+                                    <li>
+                                        <span class="option">사용언어</span>
+                                        <span class="option_cont">HTML, CSS, JS</span>
+                                    </li>
+                                    <li>
+                                        <span class="option">참여도</span>
+                                        <span class="option_cont">퍼블리싱 100%</span>
+                                    </li>
+                                </ul>
+
+                                <div class="buttons">
+                                    <button class="process">PROCESS</button>
+                                    <button class="website">WEBSITE</button>
+                                </div>
+
+                                <button class="qr">QR 보기</button>
+                                <div class="qr_img">
+                                    <img src="" alt="">
+                                </div><!-- .qr_img end -->
+
+                            </div><!-- .text end -->
+                        </div><!-- .item end -->
+
+                        <div class="item">
+                            <figure><img src="img/mockup.png" alt=""></figure>
+
+                            <div class="text">
+                                <h3>카카오프렌즈 샵</h3>
+                                <p>카카오프렌즈 캐릭터 상품을 판매하는 '카카오프렌즈 샵' 적응형 홈페이지 리뉴얼입니다.</p>
+
+                                <ul>
+                                    <li>
+                                        <span class="option">프로젝트</span>
+                                        <span class="option_cont">적응형 웹사이트/리뉴얼</span>
+                                    </li>
+                                    <li>
+                                        <span class="option">프로그램</span>
+                                        <span class="option_cont">VSCode, Ps, Figma</span>
+                                    </li>
+                                    <li>
+                                        <span class="option">사용언어</span>
+                                        <span class="option_cont">HTML, CSS</span>
+                                    </li>
+                                    <li>
+                                        <span class="option">참여도</span>
+                                        <span class="option_cont">기획, 디자인, 퍼블리싱 100%</span>
+                                    </li>
+                                </ul>
+
+                                <div class="buttons">
+                                    <button class="process">PROCESS</button>
+                                    <button class="website">WEBSITE</button>
+                                </div>
+
+                            </div><!-- .text end -->
+                        </div><!-- .item end -->
+
+                        <div class="item">
+                            <figure><img src="img/mockup.png" alt=""></figure>
+
+                            <div class="text">
+                                <h3>히스피커피</h3>
+                                <p>카페 프렌차이즈 '히스피커피' 적응형 홈페이지 리뉴얼입니다.</p>
+
+                                <ul>
+                                    <li>
+                                        <span class="option">프로젝트</span>
+                                        <span class="option_cont">적응형 웹사이트/리뉴얼</span>
+                                    </li>
+                                    <li>
+                                        <span class="option">프로그램</span>
+                                        <span class="option_cont">VSCode, Ps</span>
+                                    </li>
+                                    <li>
+                                        <span class="option">사용언어</span>
+                                        <span class="option_cont">HTML, CSS</span>
+                                    </li>
+                                    <li>
+                                        <span class="option">참여도</span>
+                                        <span class="option_cont">기획, 디자인, 퍼블리싱 100%</span>
+                                    </li>
+                                </ul>
+
+                                <div class="buttons">
+                                    <button class="process">PROCESS</button>
+                                    <button class="website">WEBSITE</button>
+                                </div>
+
+                            </div><!-- .text end -->
+                        </div><!-- .item end -->
+
+                        <div class="item"><!-- paris -->
+                            <figure><img src="img/paris.png" alt="파리바게트"></figure>
+
+                            <div class="text">
+                                <h3>파리바게트</h3>
+                                <p>제과점 프렌차이즈 '파리바게트' 적응형 홈페이지 리뉴얼입니다.</p>
+
+                                <ul>
+                                    <li>
+                                        <span class="option">프로젝트</span>
+                                        <span class="option_cont">적응형 웹사이트/리뉴얼</span>
+                                    </li>
+                                    <li>
+                                        <span class="option">프로그램</span>
+                                        <span class="option_cont">VSCode, Ps/span>
+                                    </li>
+                                    <li>
+                                        <span class="option">사용언어</span>
+                                        <span class="option_cont">HTML, CSS</span>
+                                    </li>
+                                    <li>
+                                        <span class="option">참여도</span>
+                                        <span class="option_cont">디자인, 퍼블리싱 70%</span>
+                                    </li>
+                                </ul>
+
+                                <div class="buttons"><button class="website">WEBSITE</button></div>
+
+                            </div><!-- .text end -->
+                        </div><!-- .item end -->
+
+                        <div class="item"><!-- cgv -->
+                            <figure><img src="img/cgv.png" alt="CGV"></figure>
+
+                            <div class="text">
+                                <h3>CGV</h3>
+                                <p>영화관 'CGV' 모바일 UX 설계입니다.</p>
+
+                                <ul>
+                                    <li>
+                                        <span class="option">프로젝트</span>
+                                        <span class="option_cont">모바일 앱/모작</span>
+                                    </li>
+                                    <li>
+                                        <span class="option">프로그램</span>
+                                        <span class="option_cont">Figma</span>
+                                    </li>
+                                    <li>
+                                        <span class="option">참여도</span>
+                                        <span class="option_cont">디자인 100%</span>
+                                    </li>
+                                </ul>
+
+                                <div class="buttons">
+                                    <button class="process">PROCESS</button>
+                                    <button class="website">WEBSITE</button>
+                                </div>
+
+                                <button class="qr">QR 보기</button>
+                                <div class="qr_img">
+                                    <img src="" alt="">
+                                </div><!-- .qr_img end -->
+
+                            </div><!-- .text end -->
+                        </div><!-- .item end -->
+
+                    </div><!-- .list end -->
+
+                    <div class="list web">
+                        <div class="item"><!-- .amuse -->
+                            <figure><img src="img/amuse.png" alt="어뮤즈"></figure>
+
+                            <div class="text">
+                                <h3>어뮤즈</h3>
+                                <p>뷰티 브랜드 '어뮤즈' 반응형 홈페이지 리뉴얼입니다.</p>
+
+                                <ul>
+                                    <li>
+                                        <span class="option">프로젝트</span>
+                                        <span class="option_cont">반응형 웹사이트/리뉴얼</span>
+                                    </li>
+                                    <li>
+                                        <span class="option">프로그램</span>
+                                        <span class="option_cont">VSCode, Ps, Figma</span>
+                                    </li>
+                                    <li>
+                                        <span class="option">사용언어</span>
+                                        <span class="option_cont">HTML, CSS, JS, Jquery</span>
+                                    </li>
+                                    <li>
+                                        <span class="option">참여도</span>
+                                        <span class="option_cont">기획, 디자인, 퍼블리싱 100%</span>
+                                    </li>
+                                </ul>
+
+                                <div class="buttons">
+                                    <button class="process">PROCESS</button>
+                                    <button class="website">WEBSITE</button>
+                                </div><!-- .buttons end -->
+
+                                <button class="qr">QR 보기</button>
+                                <div class="qr_img">
+                                    <img src="img/gs01.svg" alt="">
+                                </div><!-- .qr_img end -->
+
+                            </div><!-- .text end -->
+                        </div><!-- .item end -->
+
+                        <div class="item"><!-- .purito -->
+                            <figure><img src="img/mockup.png" alt=""></figure>
+
+                            <div class="text">
+                                <h3>퓨리토 서울</h3>
+                                <p>건강/뷰티 브랜드 '퓨리토 서울' 반응형 홈페이지 모작입니다.</p>
+
+                                <ul>
+                                    <li>
+                                        <span class="option">프로젝트</span>
+                                        <span class="option_cont">반응형 웹사이트/모작</span>
+                                    </li>
+                                    <li>
+                                        <span class="option">프로그램</span>
+                                        <span class="option_cont">VSCode</span>
+                                    </li>
+                                    <li>
+                                        <span class="option">사용언어</span>
+                                        <span class="option_cont">HTML, CSS, JS, Jquery</span>
+                                    </li>
+                                    <li>
+                                        <span class="option">참여도</span>
+                                        <span class="option_cont">퍼블리싱 100%</span>
+                                    </li>
+                                </ul>
+
+                                <button class="website">WEBSITE</button>
+
+                                <button class="qr">QR 보기</button>
+                                <div class="qr_img">
+                                    <img src="" alt="">
+                                </div><!-- .qr_img end -->
+
+                            </div><!-- .text end -->
+                        </div><!-- .item end -->
+
+                        <div class="item"><!-- soomgo -->
+                            <figure><img src="img/soomgo.png" alt="숨고"></figure>
+
+                            <div class="text">
+                                <h3>숨고</h3>
+                                <p>전문가 매칭 서비스 플랫폼 '숨고' 반응형 홈페이지 리뉴얼입니다.</p>
+
+                                <ul>
+                                    <li>
+                                        <span class="option">프로젝트</span>
+                                        <span class="option_cont">반응형 웹사이트/리뉴얼</span>
+                                    </li>
+                                    <li>
+                                        <span class="option">프로그램</span>
+                                        <span class="option_cont">VSCode, Figma</span>
+                                    </li>
+                                    <li>
+                                        <span class="option">사용언어</span>
+                                        <span class="option_cont">HTML, CSS, JS</span>
+                                    </li>
+                                    <li>
+                                        <span class="option">참여도</span>
+                                        <span class="option_cont">기획, 디자인, 퍼블리싱 100%</span>
+                                    </li>
+                                </ul>
+
+                                <div class="buttons">
+                                    <button class="process">PROCESS</button>
+                                    <button class="website">WEBSITE</button>
+                                </div><!-- buttons end -->
+
+                                <button class="qr">QR 보기</button>
+                                <div class="qr_img">
+                                    <img src="" alt="">
+                                </div><!-- .qr_img end -->
+
+                            </div><!-- .text end -->
+                        </div><!-- .item end -->
+
+                        <div class="item"><!-- salon -->
+                            <figure><img src="img/salon.png" alt="슬유살롱"></figure>
+
+                            <div class="text">
+                                <h3>슬유살롱</h3>
+                                <p>1인 가구를 대상으로 유성구에서 운영하는 '슬유살롱' 반응형 홈페이지 모작입니다.</p>
+
+                                <ul>
+                                    <li>
+                                        <span class="option">프로젝트</span>
+                                        <span class="option_cont">반응형 웹사이트/모작</span>
+                                    </li>
+                                    <li>
+                                        <span class="option">프로그램</span>
+                                        <span class="option_cont">VSCode, Figma</span>
+                                    </li>
+                                    <li>
+                                        <span class="option">사용언어</span>
+                                        <span class="option_cont">HTML, CSS, JS</span>
+                                    </li>
+                                    <li>
+                                        <span class="option">참여도</span>
+                                        <span class="option_cont">퍼블리싱 100%</span>
+                                    </li>
+                                </ul>
+
+                                <div class="buttons">
+                                    <button class="process">PROCESS</button>
+                                    <button class="website">WEBSITE</button>
+                                </div>
+
+                                <button class="qr">QR 보기</button>
+                                <div class="qr_img">
+                                    <img src="" alt="">
+                                </div><!-- .qr_img end -->
+
+                            </div><!-- .text end -->
+                        </div><!-- .item end -->
+
+                        <div class="item">
+                            <figure><img src="img/mockup.png" alt=""></figure>
+
+                            <div class="text">
+                                <h3>카카오프렌즈 샵</h3>
+                                <p>카카오프렌즈 캐릭터 상품을 판매하는 '카카오프렌즈 샵' 적응형 홈페이지 리뉴얼입니다.</p>
+
+                                <ul>
+                                    <li>
+                                        <span class="option">프로젝트</span>
+                                        <span class="option_cont">적응형 웹사이트/리뉴얼</span>
+                                    </li>
+                                    <li>
+                                        <span class="option">프로그램</span>
+                                        <span class="option_cont">VSCode, Ps, Figma</span>
+                                    </li>
+                                    <li>
+                                        <span class="option">사용언어</span>
+                                        <span class="option_cont">HTML, CSS</span>
+                                    </li>
+                                    <li>
+                                        <span class="option">참여도</span>
+                                        <span class="option_cont">기획, 디자인, 퍼블리싱 100%</span>
+                                    </li>
+                                </ul>
+
+                                <div class="buttons">
+                                    <button class="process">PROCESS</button>
+                                    <button class="website">WEBSITE</button>
+                                </div>
+
+                            </div><!-- .text end -->
+                        </div><!-- .item end -->
+
+                        <div class="item">
+                            <figure><img src="img/mockup.png" alt=""></figure>
+
+                            <div class="text">
+                                <h3>히스피커피</h3>
+                                <p>카페 프렌차이즈 '히스피커피' 적응형 홈페이지 리뉴얼입니다.</p>
+
+                                <ul>
+                                    <li>
+                                        <span class="option">프로젝트</span>
+                                        <span class="option_cont">적응형 웹사이트/리뉴얼</span>
+                                    </li>
+                                    <li>
+                                        <span class="option">프로그램</span>
+                                        <span class="option_cont">VSCode, Ps</span>
+                                    </li>
+                                    <li>
+                                        <span class="option">사용언어</span>
+                                        <span class="option_cont">HTML, CSS</span>
+                                    </li>
+                                    <li>
+                                        <span class="option">참여도</span>
+                                        <span class="option_cont">기획, 디자인, 퍼블리싱 100%</span>
+                                    </li>
+                                </ul>
+
+                                <div class="buttons">
+                                    <button class="process">PROCESS</button>
+                                    <button class="website">WEBSITE</button>
+                                </div>
+
+                            </div><!-- .text end -->
+                        </div><!-- .item end -->
+
+                        <div class="item"><!-- paris -->
+                            <figure><img src="img/paris.png" alt="파리바게트"></figure>
+
+                            <div class="text">
+                                <h3>파리바게트</h3>
+                                <p>제과점 프렌차이즈 '파리바게트' 적응형 홈페이지 리뉴얼입니다.</p>
+
+                                <ul>
+                                    <li>
+                                        <span class="option">프로젝트</span>
+                                        <span class="option_cont">적응형 웹사이트/리뉴얼</span>
+                                    </li>
+                                    <li>
+                                        <span class="option">프로그램</span>
+                                        <span class="option_cont">VSCode, Ps/span>
+                                    </li>
+                                    <li>
+                                        <span class="option">사용언어</span>
+                                        <span class="option_cont">HTML, CSS</span>
+                                    </li>
+                                    <li>
+                                        <span class="option">참여도</span>
+                                        <span class="option_cont">디자인, 퍼블리싱 70%</span>
+                                    </li>
+                                </ul>
+
+                                <button class="website">WEBSITE</button>
+
+                            </div><!-- .text end -->
+                        </div><!-- .item end -->
+                    </div><!-- .list end -->
+
+                    <div class="list app">
+                        <div class="item"><!-- cgv -->
+                            <figure><img src="img/cgv.png" alt="CGV"></figure>
+
+                            <div class="text">
+                                <h3>CGV</h3>
+                                <p>영화관 'CGV' 모바일 UX 설계입니다.</p>
+
+                                <ul>
+                                    <li>
+                                        <span class="option">프로젝트</span>
+                                        <span class="option_cont">모바일 앱/모작</span>
+                                    </li>
+                                    <li>
+                                        <span class="option">프로그램</span>
+                                        <span class="option_cont">Figma</span>
+                                    </li>
+                                    <li>
+                                        <span class="option">참여도</span>
+                                        <span class="option_cont">디자인 100%</span>
+                                    </li>
+                                </ul>
+
+                                <div class="buttons">
+                                    <button class="process">PROCESS</button>
+                                    <button class="website">WEBSITE</button>
+                                </div>
+
+                                <button class="qr">QR 보기</button>
+                                <div class="qr_img">
+                                    <img src="" alt="">
+                                </div><!-- .qr_img end -->
+
+                            </div><!-- .text end -->
+                        </div><!-- .item end -->
+                    </div><!-- .list end -->
+                </div><!-- .inner end -->
+            </div><!-- #section2 end -->
+
+            <div class="section" id="section3">
+                <div class="inner">
+                    <h3>Graphic Design</h3>
+                    <div class="graphic_slide">
+                        <div class="item ps">
+                            <a href="design/ps01.jpg" data-fancybox>
+                                <figure><img src="design/ps01.jpg" alt="포토샵"></figure>
+                            </a>
+                        </div>
+                        <div class="item ps">
+                            <a href="design/ps02.jpg" data-fancybox>
+                                <figure><img src="design/ps02.jpg" alt="포토샵"></figure>
+                            </a>
+                        </div>
+                        <div class="item ps">
+                            <a href="design/ps03.jpg" data-fancybox>
+                                <figure><img src="design/ps03.jpg" alt="포토샵"></figure>
+                            </a>
+                        </div>
+                        <div class="item ps">
+                            <a href="design/ps04.jpg" data-fancybox>
+                                <figure><img src="design/ps04.jpg" alt="포토샵"></figure>
+                            </a>
+                        </div>
+                        <div class="item ps">
+                            <a href="design/ps05.jpg" data-fancybox>
+                                <figure><img src="design/ps05.jpg" alt="포토샵"></figure>
+                            </a>
+                        </div>
+                        <div class="item ps">
+                            <a href="design/ps06.jpg" data-fancybox>
+                                <figure><img src="design/ps06.jpg" alt="포토샵"></figure>
+                            </a>
+                        </div>
+                        <div class="item ps">
+                            <a href="design/ps07.jpg" data-fancybox>
+                                <figure><img src="design/ps07.jpg" alt="포토샵"></figure>
+                            </a>
+                        </div>
+                        <div class="item ps">
+                            <a href="design/ps08.jpg" data-fancybox>
+                                <figure><img src="design/ps08.jpg" alt="포토샵"></figure>
+                            </a>
+                        </div>
+                        <div class="item ps">
+                            <a href="design/ps09.jpg" data-fancybox>
+                                <figure><img src="design/ps09.jpg" alt="포토샵"></figure>
+                            </a>
+                        </div>
+                        <div class="item ai">
+                            <a href="design/ai01.jpg" data-fancybox>
+                                <figure><img src="design/ai01.jpg" alt="일러스트"></figure>
+                            </a>
+                        </div>
+                        <div class="item ai">
+                            <a href="design/ai02.jpg" data-fancybox>
+                                <figure><img src="design/ai02.jpg" alt="일러스트"></figure>
+                            </a>
+                        </div>
+                    </div><!-- .slide end -->
+                    <div class="graphic">
+                        <div class="item ps">
+                            <a href="design/ps01.jpg" data-fancybox>
+                                <figure><img src="design/ps01.jpg" alt="포토샵"></figure>
+                            </a>
+                        </div>
+                        <div class="item ps">
+                            <a href="design/ps02.jpg" data-fancybox>
+                                <figure><img src="design/ps02.jpg" alt="포토샵"></figure>
+                            </a>
+                        </div>
+                        <div class="item ps">
+                            <a href="design/ps03.jpg" data-fancybox>
+                                <figure><img src="design/ps03.jpg" alt="포토샵"></figure>
+                            </a>
+                        </div>
+                        <div class="item ps">
+                            <a href="design/ps04.jpg" data-fancybox>
+                                <figure><img src="design/ps04.jpg" alt="포토샵"></figure>
+                            </a>
+                        </div>
+                        <div class="item ps">
+                            <a href="design/ps05.jpg" data-fancybox>
+                                <figure><img src="design/ps05.jpg" alt="포토샵"></figure>
+                            </a>
+                        </div>
+                        <div class="item ps">
+                            <a href="design/ps06.jpg" data-fancybox>
+                                <figure><img src="design/ps06.jpg" alt="포토샵"></figure>
+                            </a>
+                        </div>
+                        <div class="item ps">
+                            <a href="design/ps07.jpg" data-fancybox>
+                                <figure><img src="design/ps07.jpg" alt="포토샵"></figure>
+                            </a>
+                        </div>
+                        <div class="item ps">
+                            <a href="design/ps08.jpg" data-fancybox>
+                                <figure><img src="design/ps08.jpg" alt="포토샵"></figure>
+                            </a>
+                        </div>
+                        <div class="item ps">
+                            <a href="design/ps09.jpg" data-fancybox>
+                                <figure><img src="design/ps09.jpg" alt="포토샵"></figure>
+                            </a>
+                        </div>
+                        <div class="item ai">
+                            <a href="design/ai01.jpg" data-fancybox>
+                                <figure><img src="design/ai01.jpg" alt="일러스트"></figure>
+                            </a>
+                        </div>
+                        <div class="item ai">
+                            <a href="design/ai02.jpg" data-fancybox>
+                                <figure><img src="design/ai02.jpg" alt="일러스트"></figure>
+                            </a>
+                        </div>
+                    </div><!-- .graphic end -->
+                </div>
+            </div><!-- #section3 end -->
+
+            <div class="section" id="section4">
+                <div class="inner">
+                    <div class="typing">
+                        <h4>Thank you</h4>
+                    </div><!-- .typing end -->
+
+                    <div class="info">
+                        <h3>Contact Me</h3>
+                        <div class="cont">
+                            <figure>
+                                <img src="" alt="">
+                            </figure>
+                            <div class="text">
+                                <ul>
+                                    <li>
+                                        <span class="list">Name</span>
+                                        <span class="list_cont">박정원</span>
+                                    </li>
+                                    <li>
+                                        <span class="list">Phone</span>
+                                        <span class="list_cont">010-4481-1278</span>
+                                    </li>
+                                    <li>
+                                        <span class="list">Email</span>
+                                        <span class="list_cont">wjd1278@naver.com</span>
+                                    </li>
+                                </ul>
+                            </div><!-- .text end -->
+                        </div><!-- .cont end -->
+                        <div class="buttons">
+                            <button class="github">Github 바로가기</button>
+                            <button class="resume">이력서 다운로드</button>
+                        </div><!-- buttons end -->
+                    </div><!-- .info end -->
+                </div><!-- .inner end -->
+            </div><!-- #section4 end -->
+        </main>
+
+        <footer class="footer">
+            <p>본 사이트는 상업적 목적이 아닌 개인포트폴리오 사이트로 제작되었습니다.
+            <p>일부 이미지와 폰트 등은 그 출처가 따로 있음을 밝힙니다.</p>
+            <p class="copyright">Copyrightⓒ2024.박정원.All rightsreserved.</p>
+        </footer><!-- footer end -->
+
+    </body>
+</body>
+
+</html>
