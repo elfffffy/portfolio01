@@ -714,7 +714,7 @@ button.website {
 
 .slick-dots {
     display: block;
-    margin-top: 30px;
+    position: relative;
 }
 
 .slick-dots li {
