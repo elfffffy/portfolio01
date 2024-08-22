@@ -253,7 +253,7 @@ html {
     left: 50%;
     transform: translateX(-50%);
 
-    animation: wheel 1.5s linear reverse infinite;
+    animation: wheel 1s linear reverse infinite;
 }
 
 #section0 .mouse_scroll p {
