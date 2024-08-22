@@ -5,6 +5,7 @@
     --fontTitle: 'DM Serif Text';
     --fontMain: 'Pretendard';
     --fontEngMain: 'Cormorant';
+    --fontEngSub: "Roboto";
     --colorMain: #007A39;
     --colorGrey6: #666666;
     --colorGrey8: #888888;
@@ -193,8 +194,8 @@ html {
 #section0 .text span {
     font-size: 25px;
     letter-spacing: 0px;
-    font-weight: 600;
-    font-family: var(--fontMain);
+    font-weight: 500;
+    font-family: var(--fontEngSub);
     position: absolute;
     text-align: center;
 }
@@ -216,7 +217,7 @@ html {
 }
 
 #section0 .text span strong {
-    font-weight: 600;
+    font-weight: 500;
     color: var(--colorMain);
 }
 
