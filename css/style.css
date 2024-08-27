@@ -342,7 +342,7 @@ html {
 #section1 .left .about .text ul {
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 12px;
 }
 
 #section1 .left .about .text ul li {
@@ -578,10 +578,18 @@ button.process {
 
     font-size: 20px;
     font-weight: 500;
+
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    transition: 0.3s;
+}
+
+button.website {
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    transition: 0.3s;
 }
 
 button.process:hover {
-    background-color:#ededed;
+    background-color: rgba(0, 122, 57, 0.2);
 }
 
 button.website:hover {
@@ -841,19 +849,21 @@ button.website {
     gap: 30px;
 }
 
-#section4 .info .cont button {
+#section4 .info .cont button.qr {
     width: 150px;
     height: 150px;
-    border-radius: 20px;
     overflow: hidden;
     background-color: transparent;
     border: 0;
-
 }
 
-#section4 .info .cont button img {
-    width: 100%;
-    height: 100%;
+#section4 .info .cont button.qr p {
+    font-size: 14px;
+}
+
+#section4 .info .cont button.qr img {
+    width: 80%;
+    height: 80%;
 }
 
 #section4 .info .cont .text ul li {
@@ -882,7 +892,7 @@ button.website {
     margin-top: 50px;
 }
 
-#section4 .info button {
+#section4 .info .buttons button {
     width: 240px;
     height: 50px;
     border: 2px solid transparent;
@@ -896,16 +906,27 @@ button.website {
     font-family: var(--fontMain);
     font-size: 18px;
     font-weight: 500;
+
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 }
 
 #section4 .info button.github {
     border-color: var(--colorMain);
 }
 
+#section4 .info button.github:hover {
+    background-color: rgba(0, 122, 57, 0.2);
+}
+
 #section4 .info button.resume {
     background-color: var(--colorMain);
     color: #fff;
 }
+
+#section4 .info button.resume:hover {
+    background-color: #003b1c;
+}
+
 
 .footer {
     width: 100%;
