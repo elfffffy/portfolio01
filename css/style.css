@@ -502,18 +502,6 @@ html {
 
 #section2 .list .item:last-child {
     margin-bottom: 0;
-    position: relative;
-}
-
-#section2 .list.all .item:last-child::before {
-    content: '';
-    width: 100%;
-    height: 1px;
-    border-radius: 100px;
-    background-color: #333;
-    position: absolute;
-    top: -100px;
-    left: 0;
 }
 
 #section2 .list .item figure {
@@ -893,7 +881,7 @@ button.website {
 }
 
 #section4 .info .buttons button {
-    width: 240px;
+    width: 200px;
     height: 50px;
     border: 2px solid transparent;
     background-color: #fff;
