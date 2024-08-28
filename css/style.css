@@ -260,6 +260,7 @@ html {
     z-index: 99;
 
     background-color: transparent;
+    backdrop-filter: ;
 }
 
 .header .inner {
@@ -372,14 +373,14 @@ html {
 
 #section0 .title {
     position: relative;
-    width: 1110px;
+    width: 1060px;
     height: 200px;
 }
 
 #section0 .title h2 {
     color: #333;
     font-family: var(--fontMain);
-    font-size: 200px;
+    font-size: 190px;
     position: absolute;
     top: 0;
     left: 0;
