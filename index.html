@@ -48,7 +48,7 @@
                 arrows: false,
                 dots: true,
                 autoplay: true,
-                autoplaySpeed: 1500,
+                autoplaySpeed: 2000,
                 responsive: [
                     {
                         breakpoint: 1401,
@@ -73,30 +73,43 @@
             })
 
             let gnb = $('.pc_nav .gnb li');
+
             gnb.eq(0).addClass('active');
+
             gnb.click(function () {
                 gnb.removeClass('active');
                 $(this).addClass('active');
             })
 
+            gnb.mouseenter(function () {
+                gnb.removeClass('on');
+                $(this).addClass('on');
+            })
+
+            gnb.mouseleave(function () {
+                gnb.removeClass('on');
+            })
+
+
             let menuBtn = $('.mobile_nav button');
             let mobileGnb = $('.mobile_nav .gnb');
+            let mobileMenu = $('.mobile_nav .gnb li a');
+
+            mobileMenu.mouseenter(function(){
+                $(this).addClass('enter');
+            })
+
+            mobileMenu.mouseleave(function(){
+                $(this).removeClass('enter');
+            })
 
             menuBtn.click(function () {
                 menuBtn.toggleClass('on');
                 mobileGnb.slideToggle();
-            })
-
-            let skill = $('.skills li');
-            let skillText = $('.skills .explain li');
-
-            skill.mouseenter(function () {
-                skillText.hide();
-                skillText.eq($(this).index()).fadeIn();
-            })
-
-            skill.mouseleave(function () {
-                skillText.fadeOut();
+                mobileMenu.click(function(){
+                    mobileGnb.slideUp();
+                    menuBtn.removeClass('on');
+                })
             })
 
             let tabMenu = $('#section2 .tab_menu .menu li');
@@ -128,6 +141,21 @@
                 $(this).toggleClass('on');
                 $(this).next().slideToggle();
             })
+
+            $('body').addClass('scroll');
+
+            let loading = $('.loading');
+            $(window).scrollTop(0);
+
+            setTimeout(function(){
+                loading.css('opacity', '0%');  
+                $('body').removeClass('scroll');
+            }, 3500);
+
+            setTimeout(function(){
+                loading.css('display', 'none');    
+            }, 4000);
+            
         })//script end
     </script>
 </head>
@@ -161,7 +189,8 @@
                     </svg>
                 </div>
             </div><!-- airplane end -->
-            <h3>다음 목적지는 PUBLISHING GARDEN입니다.</h3>
+            <h3>Welcome to PUBLISHING GARDEN</h3>
+            <div class="stamp"></div>
         </div><!-- .content -->
     </div><!-- .loading end -->
 
@@ -186,11 +215,11 @@
                 </button>
 
                 <ul class="gnb">
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Project</a></li>
-                    <li><a href="#">Design</a></li>
-                    <li><a href="#">Contact</a></li>
+                    <li><a href="#section0">Home</a></li>
+                    <li><a href="#section1">About</a></li>
+                    <li><a href="#section2">Project</a></li>
+                    <li><a href="#section3">Design</a></li>
+                    <li><a href="#section4">Contact</a></li>
                 </ul><!-- .gnb end -->
             </nav><!-- .mobile_nav end -->
         </div><!-- .inner end -->
@@ -246,6 +275,7 @@
                                     <span class="list_cont">wjd1278@naver.com</span>
                                 </li>
                             </ul>
+                            <button class="pdf" onclick="window.open('img/포트폴리오pdf.pdf')">포트폴리오 pdf</button>
                         </div><!-- .text end -->
                     </div><!-- about end -->
                 </div><!-- .left end -->
@@ -712,7 +742,7 @@
 
                             <div class="buttons">
                                 <button class="website"
-                                    onclick="location.href='https://elfffffy.github.io/puritoSeoul_imitation/'">WEBSITE</button>
+                                    onclick="window.open('https://elfffffy.github.io/puritoSeoul_imitation/')">WEBSITE</button>
                             </div>
 
                             <div class="qr_box">
@@ -1007,11 +1037,7 @@
                             <figure><img src="design/ps06.jpg" alt="포토샵"></figure>
                         </a>
                     </div>
-                    <div class="item ps">
-                        <a href="design/ps07.jpg" data-fancybox="gallery">
-                            <figure><img src="design/ps07.jpg" alt="포토샵"></figure>
-                        </a>
-                    </div>
+                    
                     <div class="item ps">
                         <a href="design/ps08.jpg" data-fancybox="gallery">
                             <figure><img src="design/ps08.jpg" alt="포토샵"></figure>
@@ -1022,14 +1048,50 @@
                             <figure><img src="design/ps09.jpg" alt="포토샵"></figure>
                         </a>
                     </div>
-                    <div class="item ai">
-                        <a href="design/ai01.jpg" data-fancybox="gallery">
-                            <figure><img src="design/ai01.jpg" alt="일러스트"></figure>
+                    <div class="item ps">
+                        <a href="design/ps10.jpg" data-fancybox="gallery">
+                            <figure><img src="design/ps10.jpg" alt="포토샵"></figure>
                         </a>
                     </div>
-                    <div class="item ai">
-                        <a href="design/ai02.jpg" data-fancybox="gallery">
-                            <figure><img src="design/ai02.jpg" alt="일러스트"></figure>
+                    <div class="item ps">
+                        <a href="design/ps11.jpg" data-fancybox="gallery">
+                            <figure><img src="design/ps11.jpg" alt="포토샵"></figure>
+                        </a>
+                    </div>
+                    
+                    <div class="item ps">
+                        <a href="design/ps13.jpg" data-fancybox="gallery">
+                            <figure><img src="design/ps13.jpg" alt="포토샵"></figure>
+                        </a>
+                    </div>
+                    <div class="item ps">
+                        <a href="design/ps14.jpg" data-fancybox="gallery">
+                            <figure><img src="design/ps14.jpg" alt="포토샵"></figure>
+                        </a>
+                    </div>
+                    <div class="item ps">
+                        <a href="design/ps15.jpg" data-fancybox="gallery">
+                            <figure><img src="design/ps15.jpg" alt="포토샵"></figure>
+                        </a>
+                    </div>
+                    <div class="item ps">
+                        <a href="design/ps16.jpg" data-fancybox="gallery">
+                            <figure><img src="design/ps16.jpg" alt="포토샵"></figure>
+                        </a>
+                    </div>
+                    <div class="item ps">
+                        <a href="design/ps17.jpg" data-fancybox="gallery">
+                            <figure><img src="design/ps17.jpg" alt="포토샵"></figure>
+                        </a>
+                    </div>
+                    <div class="item ps">
+                        <a href="design/ps18.jpg" data-fancybox="gallery">
+                            <figure><img src="design/ps18.jpg" alt="포토샵"></figure>
+                        </a>
+                    </div>
+                    <div class="item ps">
+                        <a href="design/ps19.jpg" data-fancybox="gallery">
+                            <figure><img src="design/ps19.jpg" alt="포토샵"></figure>
                         </a>
                     </div>
                     <div class="item ai">
@@ -1068,7 +1130,7 @@
                         </a>
                     </div>
                 </div><!-- .slide end -->
-                <div class="graphic all">
+                <div class="graphic all on">
                     <div class="item ps">
                         <a href="design/ps01.jpg" data-fancybox="gallery">
                             <figure><img src="design/ps01.jpg" alt="포토샵"></figure>
@@ -1099,11 +1161,7 @@
                             <figure><img src="design/ps06.jpg" alt="포토샵"></figure>
                         </a>
                     </div>
-                    <div class="item ps">
-                        <a href="design/ps07.jpg" data-fancybox="gallery">
-                            <figure><img src="design/ps07.jpg" alt="포토샵"></figure>
-                        </a>
-                    </div>
+                    
                     <div class="item ps">
                         <a href="design/ps08.jpg" data-fancybox="gallery">
                             <figure><img src="design/ps08.jpg" alt="포토샵"></figure>
@@ -1112,6 +1170,52 @@
                     <div class="item ps">
                         <a href="design/ps09.jpg" data-fancybox="gallery">
                             <figure><img src="design/ps09.jpg" alt="포토샵"></figure>
+                        </a>
+                    </div>
+                    <div class="item ps">
+                        <a href="design/ps10.jpg" data-fancybox="gallery">
+                            <figure><img src="design/ps10.jpg" alt="포토샵"></figure>
+                        </a>
+                    </div>
+                    <div class="item ps">
+                        <a href="design/ps11.jpg" data-fancybox="gallery">
+                            <figure><img src="design/ps11.jpg" alt="포토샵"></figure>
+                        </a>
+                    </div>
+                    
+                    <div class="item ps">
+                        <a href="design/ps13.jpg" data-fancybox="gallery">
+                            <figure><img src="design/ps13.jpg" alt="포토샵"></figure>
+                        </a>
+                    </div>
+                    <div class="item ps">
+                        <a href="design/ps14.jpg" data-fancybox="gallery">
+                            <figure><img src="design/ps14.jpg" alt="포토샵"></figure>
+                        </a>
+                    </div>
+                    <div class="item ps">
+                        <a href="design/ps15.jpg" data-fancybox="gallery">
+                            <figure><img src="design/ps15.jpg" alt="포토샵"></figure>
+                        </a>
+                    </div>
+                    <div class="item ps">
+                        <a href="design/ps16.jpg" data-fancybox="gallery">
+                            <figure><img src="design/ps16.jpg" alt="포토샵"></figure>
+                        </a>
+                    </div>
+                    <div class="item ps">
+                        <a href="design/ps17.jpg" data-fancybox="gallery">
+                            <figure><img src="design/ps17.jpg" alt="포토샵"></figure>
+                        </a>
+                    </div>
+                    <div class="item ps">
+                        <a href="design/ps18.jpg" data-fancybox="gallery">
+                            <figure><img src="design/ps18.jpg" alt="포토샵"></figure>
+                        </a>
+                    </div>
+                    <div class="item ps">
+                        <a href="design/ps19.jpg" data-fancybox="gallery">
+                            <figure><img src="design/ps19.jpg" alt="포토샵"></figure>
                         </a>
                     </div>
                     <div class="item ai">
@@ -1151,7 +1255,7 @@
                     </div>
                 </div><!-- .graphic end -->
 
-                <div class="graphic ps on">
+                <div class="graphic ps">
                     <div class="item ps">
                         <a href="design/ps01.jpg" data-fancybox="gallery">
                             <figure><img src="design/ps01.jpg" alt="포토샵"></figure>
@@ -1182,11 +1286,7 @@
                             <figure><img src="design/ps06.jpg" alt="포토샵"></figure>
                         </a>
                     </div>
-                    <div class="item ps">
-                        <a href="design/ps07.jpg" data-fancybox="gallery">
-                            <figure><img src="design/ps07.jpg" alt="포토샵"></figure>
-                        </a>
-                    </div>
+                    
                     <div class="item ps">
                         <a href="design/ps08.jpg" data-fancybox="gallery">
                             <figure><img src="design/ps08.jpg" alt="포토샵"></figure>
@@ -1195,6 +1295,52 @@
                     <div class="item ps">
                         <a href="design/ps09.jpg" data-fancybox="gallery">
                             <figure><img src="design/ps09.jpg" alt="포토샵"></figure>
+                        </a>
+                    </div>
+                    <div class="item ps">
+                        <a href="design/ps10.jpg" data-fancybox="gallery">
+                            <figure><img src="design/ps10.jpg" alt="포토샵"></figure>
+                        </a>
+                    </div>
+                    <div class="item ps">
+                        <a href="design/ps11.jpg" data-fancybox="gallery">
+                            <figure><img src="design/ps11.jpg" alt="포토샵"></figure>
+                        </a>
+                    </div>
+                    
+                    <div class="item ps">
+                        <a href="design/ps13.jpg" data-fancybox="gallery">
+                            <figure><img src="design/ps13.jpg" alt="포토샵"></figure>
+                        </a>
+                    </div>
+                    <div class="item ps">
+                        <a href="design/ps14.jpg" data-fancybox="gallery">
+                            <figure><img src="design/ps14.jpg" alt="포토샵"></figure>
+                        </a>
+                    </div>
+                    <div class="item ps">
+                        <a href="design/ps15.jpg" data-fancybox="gallery">
+                            <figure><img src="design/ps15.jpg" alt="포토샵"></figure>
+                        </a>
+                    </div>
+                    <div class="item ps">
+                        <a href="design/ps16.jpg" data-fancybox="gallery">
+                            <figure><img src="design/ps16.jpg" alt="포토샵"></figure>
+                        </a>
+                    </div>
+                    <div class="item ps">
+                        <a href="design/ps17.jpg" data-fancybox="gallery">
+                            <figure><img src="design/ps17.jpg" alt="포토샵"></figure>
+                        </a>
+                    </div>
+                    <div class="item ps">
+                        <a href="design/ps18.jpg" data-fancybox="gallery">
+                            <figure><img src="design/ps18.jpg" alt="포토샵"></figure>
+                        </a>
+                    </div>
+                    <div class="item ps">
+                        <a href="design/ps19.jpg" data-fancybox="gallery">
+                            <figure><img src="design/ps19.jpg" alt="포토샵"></figure>
                         </a>
                     </div>
                 </div><!-- .graphic end -->
