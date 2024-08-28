@@ -37,6 +37,132 @@ html {
     scroll-behavior: smooth;
 }
 
+.loading {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: #dff5ff;
+    z-index: 99999999;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    display: none;
+}
+
+.loading .content {
+    width: 300px;
+    height: 300px;
+    background-color: pink;
+
+    position: relative;
+}
+
+.loading .airplane .svg-wrapper {
+    position: absolute;
+    top: 50px;
+    left: 0%;
+    transform: rotate(15deg);
+    width: 100px;
+    animation-duration: 3s;
+    animation-timing-function: linear;
+    animation-name: fly;
+}
+
+@keyframes fly {
+    0% {
+        top: 50px;
+        left: 0%;
+    }
+
+    100% {
+        top: 0px;
+        left: calc(100% - 80px);
+    }
+}
+
+.loading .airplane .svg-wrapper svg {
+    max-width: 60px;
+    height: auto;
+    margin: 0 auto;
+}
+
+.plane {
+    fill: none;
+    stroke: #333;
+    stroke-width: 4;
+    opacity: .7;
+}
+
+.aileron {
+    fill: none;
+    stroke: #333;
+    stroke-width: 4;
+    opacity: .7;
+}
+
+.wind {
+    stroke-width: 1;
+    stroke: white;
+    -webkit-transform-origin: top;
+    transform-origin: top;
+    animation-duration: 1.5s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-name: wind;
+    stroke-dashoffset: 0;
+    stroke-dasharray: 100;
+}
+
+.wind.one {
+    animation-delay: 2s;
+}
+
+.wind.two {
+    animation-delay: .75s;
+}
+
+.wind.three {
+    animation-delay: 0s;
+}
+
+.wind.four {
+    animation-delay: 1s;
+}
+
+.wind.five {
+    animation-delay: 1.5s;
+}
+
+.wind.six {
+    animation-delay: .25s;
+}
+
+.wind.seven {
+    animation-delay: 1.4s;
+}
+
+@keyframes wind {
+    0% {
+        stroke-dashoffset: 100;
+        stroke: white;
+    }
+
+    50% {
+        stroke-dashoffset: 0;
+        stroke: fade(#464646, 50%);
+        stroke: #aaa;
+    }
+
+    100% {
+        stroke-dashoffset: -100;
+        stroke: white;
+    }
+}
+
 .mobile {
     display: none;
 }
@@ -303,6 +429,7 @@ html {
 #section1 {
     position: relative;
     padding-left: 100px;
+    position: relative;
 }
 
 #section1::before {
@@ -521,6 +648,29 @@ html {
     justify-content: space-between;
     align-items: center;
     margin-bottom: 200px;
+    position: relative;
+}
+
+#section2 .list .item:first-child::after {
+    background: url(../img/sticker01.png) center center / 100% no-repeat;
+    content: '';
+    width: 800px;
+    height: 800px;
+    position: absolute;
+    top: 0;
+    right: -200px;
+    z-index: -1;
+}
+
+#section2 .list .item:nth-child(3)::after {
+    background: url(../img/sticker02.png) center center / 100% no-repeat;
+    content: '';
+    width: 1000px;
+    height: 1000px;
+    position: absolute;
+    top: 90px;
+    left: -200px;
+    z-index: -1;
 }
 
 #section2 .list .item:last-child {
