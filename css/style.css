@@ -50,10 +50,6 @@ html {
 
     background-color: #222;
     z-index: 99999999;
-    
-    /* animation: backgroundChange 3.8s ease-in-out infinite;
-    overflow: hidden;
-    z-index: 99999999; */
 
     display: flex;
     justify-content: center;
@@ -61,15 +57,6 @@ html {
 
     transition: 0.7s;
 }
-
-/* @keyframes backgroundChange {
-    from {
-        background-color:#cbeaff;
-    }
-    to {
-        background-color:#dff5ff;
-    }
-} */
 
 .loading .content {
     max-width: 400px;
