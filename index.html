@@ -4,7 +4,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
     <title>박정원 포트폴리오</title>
+    <link rel="icon" href="img/logo2.png" />
+    <link rel="apple-touch-icon" href="img/logo2.png" />
     <link rel="stylesheet" href="css/slick.css" />
     <link rel="stylesheet" href="css/slick-theme.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css" />
@@ -95,18 +99,18 @@
             let mobileGnb = $('.mobile_nav .gnb');
             let mobileMenu = $('.mobile_nav .gnb li a');
 
-            mobileMenu.mouseenter(function(){
+            mobileMenu.mouseenter(function () {
                 $(this).addClass('enter');
             })
 
-            mobileMenu.mouseleave(function(){
+            mobileMenu.mouseleave(function () {
                 $(this).removeClass('enter');
             })
 
             menuBtn.click(function () {
                 menuBtn.toggleClass('on');
                 mobileGnb.slideToggle();
-                mobileMenu.click(function(){
+                mobileMenu.click(function () {
                     mobileGnb.slideUp();
                     menuBtn.removeClass('on');
                 })
@@ -147,15 +151,15 @@
             let loading = $('.loading');
             $(window).scrollTop(0);
 
-            setTimeout(function(){
-                loading.css('opacity', '0%');  
+            setTimeout(function () {
+                loading.css('opacity', '0%');
                 $('body').removeClass('scroll');
             }, 3500);
 
-            setTimeout(function(){
-                loading.css('display', 'none');    
+            setTimeout(function () {
+                loading.css('display', 'none');
             }, 4000);
-            
+
         })//script end
     </script>
 </head>
@@ -1037,7 +1041,7 @@
                             <figure><img src="design/ps06.jpg" alt="포토샵"></figure>
                         </a>
                     </div>
-                    
+
                     <div class="item ps">
                         <a href="design/ps08.jpg" data-fancybox="gallery">
                             <figure><img src="design/ps08.jpg" alt="포토샵"></figure>
@@ -1058,7 +1062,7 @@
                             <figure><img src="design/ps11.jpg" alt="포토샵"></figure>
                         </a>
                     </div>
-                    
+
                     <div class="item ps">
                         <a href="design/ps13.jpg" data-fancybox="gallery">
                             <figure><img src="design/ps13.jpg" alt="포토샵"></figure>
@@ -1161,7 +1165,7 @@
                             <figure><img src="design/ps06.jpg" alt="포토샵"></figure>
                         </a>
                     </div>
-                    
+
                     <div class="item ps">
                         <a href="design/ps08.jpg" data-fancybox="gallery">
                             <figure><img src="design/ps08.jpg" alt="포토샵"></figure>
@@ -1182,7 +1186,7 @@
                             <figure><img src="design/ps11.jpg" alt="포토샵"></figure>
                         </a>
                     </div>
-                    
+
                     <div class="item ps">
                         <a href="design/ps13.jpg" data-fancybox="gallery">
                             <figure><img src="design/ps13.jpg" alt="포토샵"></figure>
@@ -1286,7 +1290,7 @@
                             <figure><img src="design/ps06.jpg" alt="포토샵"></figure>
                         </a>
                     </div>
-                    
+
                     <div class="item ps">
                         <a href="design/ps08.jpg" data-fancybox="gallery">
                             <figure><img src="design/ps08.jpg" alt="포토샵"></figure>
@@ -1307,7 +1311,7 @@
                             <figure><img src="design/ps11.jpg" alt="포토샵"></figure>
                         </a>
                     </div>
-                    
+
                     <div class="item ps">
                         <a href="design/ps13.jpg" data-fancybox="gallery">
                             <figure><img src="design/ps13.jpg" alt="포토샵"></figure>
